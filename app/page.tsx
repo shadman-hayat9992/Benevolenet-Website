@@ -16,7 +16,7 @@ export default function HomePage() {
   const testimonials = [
     {
       text: "Benevolenet transformed our online presence completely. The new website not only looks amazing but has increased our leads by 300%. Highly recommended!",
-      author: "Sarah Johnson",
+      author: "Shadman Hayat",
       role: "CEO, TechStart Inc.",
       rating: 5,
     },
