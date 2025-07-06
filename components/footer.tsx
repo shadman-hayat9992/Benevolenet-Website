@@ -56,10 +56,10 @@ export function Footer() {
             </div>
             <p className="text-gray-500 text-xs mb-2 italic">Transforming Ideas into Digital Reality</p>
             <div className="flex items-center space-x-4 text-xs text-gray-500 mb-2">
-              <span>🏆 150+ Projects</span>
+              <span>🏆 10+ Projects</span>
               <span>⭐ 5.0 Rating</span>
             </div>
-            <p className="text-gray-500 text-xs mb-1">Est. 2019 • Based in India</p>
+            <p className="text-gray-500 text-xs mb-1">Est. 2023 • Based in India</p>
             <p className="text-gray-400 text-sm mb-3">Innovative tech solutions and web design.</p>
             <div className="text-gray-400 text-xs space-y-1">
               <p>📞 +91 90754 51056</p>

@@ -95,7 +95,7 @@ export default function SignupPage() {
             {/* Testimonial */}
             <div className="mt-6 md:mt-8 p-3 md:p-4 bg-white/10 backdrop-blur-sm rounded-2xl">
               <p className="italic mb-2 md:mb-3 text-xs md:text-sm">
-                "Benevolenet transformed our business. 300% increase in leads!"
+                "Benevolenet transformed our business. Great results!"
               </p>
               <div className="flex items-center space-x-2 md:space-x-3">
                 <div className="w-6 h-6 md:w-8 md:h-8 bg-white/20 rounded-full flex-shrink-0"></div>

@@ -10,7 +10,6 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Checkbox } from "@/components/ui/checkbox"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
@@ -182,7 +181,7 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: "Office",
-      details: ["456 Innovation Lane", "Tech Hub, CA 90210"],
+      details: ["Nagpur, Maharashtra,", "India, 441002"],
       color: "green",
     },
     {
@@ -494,17 +493,6 @@ export default function ContactPage() {
                           {errors.message}
                         </div>
                       )}
-                    </div>
-
-                    <div className="flex items-center space-x-2">
-                      <Checkbox
-                        id="newsletter"
-                        checked={formData.newsletter}
-                        onCheckedChange={(checked) => handleInputChange("newsletter", checked as boolean)}
-                      />
-                      <Label htmlFor="newsletter" className="text-sm text-gray-600">
-                        Subscribe to our newsletter for web design tips and updates
-                      </Label>
                     </div>
 
                     <Button

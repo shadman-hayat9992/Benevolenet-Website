@@ -23,8 +23,6 @@ export default function ServicesPage() {
         "Color Psychology Application",
         "Typography Selection",
       ],
-      price: "Starting at $2,500",
-      timeline: "2-3 weeks",
       color: "blue",
     },
     {
@@ -39,8 +37,6 @@ export default function ServicesPage() {
         "Performance Optimization",
         "Accessibility Standards",
       ],
-      price: "Starting at $3,000",
-      timeline: "3-4 weeks",
       color: "purple",
     },
     {
@@ -55,8 +51,6 @@ export default function ServicesPage() {
         "Payment Integration",
         "Content Management",
       ],
-      price: "Starting at $5,000",
-      timeline: "4-6 weeks",
       color: "green",
     },
     {
@@ -71,8 +65,6 @@ export default function ServicesPage() {
         "Schema Markup",
         "Analytics Setup",
       ],
-      price: "Starting at $1,500",
-      timeline: "2-3 weeks",
       color: "orange",
     },
     {
@@ -88,8 +80,6 @@ export default function ServicesPage() {
         "Customer Accounts",
         "Analytics & Reporting",
       ],
-      price: "Starting at $4,000",
-      timeline: "4-5 weeks",
       color: "red",
     },
     {
@@ -104,63 +94,9 @@ export default function ServicesPage() {
         "Content Updates",
         "Technical Support",
       ],
-      price: "Starting at $200/month",
-      timeline: "Ongoing",
       color: "indigo",
     },
   ]
-
-  const packages = [
-    {
-      name: "Starter",
-      price: "$2,999",
-      description: "Perfect for small businesses and startups",
-      features: [
-        "5-page responsive website",
-        "Custom design",
-        "Mobile optimization",
-        "Basic SEO setup",
-        "Contact form",
-        "1 month support",
-      ],
-      popular: false,
-    },
-    {
-      name: "Professional",
-      price: "$5,999",
-      description: "Ideal for growing businesses",
-      features: [
-        "10-page responsive website",
-        "Custom design & branding",
-        "Advanced SEO optimization",
-        "Content management system",
-        "E-commerce ready",
-        "3 months support",
-        "Analytics setup",
-        "Social media integration",
-      ],
-      popular: true,
-    },
-    {
-      name: "Enterprise",
-      price: "$12,999",
-      description: "For large businesses with complex needs",
-      features: [
-        "Unlimited pages",
-        "Custom web application",
-        "Advanced functionality",
-        "Database integration",
-        "API development",
-        "6 months support",
-        "Training included",
-        "Priority support",
-      ],
-      popular: false,
-    },
-  ]
-
-  const ActiveServiceIcon = services[activeService].icon
-  const ActiveServiceColor = services[activeService].color
 
   return (
     <div className="min-h-screen bg-white">
@@ -208,12 +144,6 @@ export default function ServicesPage() {
                       </div>
                     ))}
                   </div>
-                  <div className="flex justify-between items-center mb-4">
-                    <div>
-                      <div className="font-semibold text-gray-900">{service.price}</div>
-                      <div className="text-sm text-gray-600">{service.timeline}</div>
-                    </div>
-                  </div>
                   <Button className="w-full group-hover:bg-blue-600 transition-colors">
                     Learn More
                     <ArrowRight className="ml-2 w-4 h-4" />
@@ -225,107 +155,23 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Service Details Modal/Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-2xl shadow-xl p-8">
-              <div className="flex items-center mb-6">
-                <div
-                  className={`w-16 h-16 bg-${ActiveServiceColor}-100 rounded-xl flex items-center justify-center mr-4`}
-                >
-                  <ActiveServiceIcon className={`w-8 h-8 text-blue-600`} />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900">{services[activeService].title}</h3>
-                  <p className="text-gray-600">{services[activeService].description}</p>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-4">What's Included:</h4>
-                  <div className="space-y-3">
-                    {services[activeService].features.map((feature) => (
-                      <div key={feature} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                        <span className="text-gray-700">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <div className="bg-gray-50 p-6 rounded-xl">
-                    <div className="text-center mb-4">
-                      <div className="text-3xl font-bold text-gray-900">{services[activeService].price}</div>
-                      <div className="text-gray-600">Timeline: {services[activeService].timeline}</div>
-                    </div>
-                    <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-                      Get Started
-                      <ArrowRight className="ml-2 w-5 h-5" />
-                    </Button>
-                  </div>
-                </div>
-              </div>
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Start Your Project?</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+            Let's bring your vision to life with our expert web design and development services. Get started today!
+          </p>
+          <div className="space-y-4">
+            <Button
+              size="lg"
+              className="bg-white text-blue-600 hover:bg-gray-100 hover:scale-105 transition-all duration-300 shadow-lg"
+            >
+              Get Free Consultation
+            </Button>
+            <div className="text-sm opacity-90">
+              📧 benevolenet436@gmail.com | 📞 +91 90754 51056 | 📞 +91 93567 24951
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Packages */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Choose Your Package</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Select the perfect package for your business needs
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {packages.map((pkg, index) => (
-              <Card
-                key={pkg.name}
-                className={`relative hover:shadow-xl transition-all duration-300 ${
-                  pkg.popular ? "border-2 border-blue-500 scale-105" : "hover:-translate-y-2"
-                }`}
-              >
-                {pkg.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium">
-                      Most Popular
-                    </div>
-                  </div>
-                )}
-                <CardHeader className="text-center">
-                  <CardTitle className="text-2xl">{pkg.name}</CardTitle>
-                  <div className="text-4xl font-bold text-gray-900 my-4">{pkg.price}</div>
-                  <CardDescription>{pkg.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3 mb-8">
-                    {pkg.features.map((feature) => (
-                      <div key={feature} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                        <span className="text-gray-700">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <Button
-                    className={`w-full ${
-                      pkg.popular
-                        ? "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-                        : ""
-                    }`}
-                    variant={pkg.popular ? "default" : "outline"}
-                  >
-                    Choose {pkg.name}
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
       </section>
