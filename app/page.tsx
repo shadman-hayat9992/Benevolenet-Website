@@ -1,22 +1,33 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import { ArrowRight, Star, Palette, Code, Smartphone, Search, Play } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { AnimatedCounter } from "@/components/animated-counter"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import {
+  ArrowRight,
+  Star,
+  Palette,
+  Code,
+  Smartphone,
+  Search,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { AnimatedCounter } from "@/components/animated-counter";
 
 export default function HomePage() {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0)
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false)
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   const testimonials = [
     {
       text: "Benevolenet transformed our online presence completely. The new website not only looks amazing but has increased our leads by 300%. Highly recommended!",
-      author: "Shadman Hayat",
+      author: "Sarah Johnson",
       role: "CEO, TechStart Inc.",
       rating: 5,
     },
@@ -32,41 +43,45 @@ export default function HomePage() {
       role: "Marketing Director, GrowthCo",
       rating: 5,
     },
-  ]
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
-    }, 5000)
-    return () => clearInterval(interval)
-  }, [testimonials.length])
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
 
   const services = [
     {
       icon: Palette,
       title: "Custom Web Design",
-      description: "Unique, tailored designs that reflect your brand and engage your audience",
+      description:
+        "Unique, tailored designs that reflect your brand and engage your audience",
       color: "blue",
     },
     {
       icon: Smartphone,
       title: "Responsive Design",
-      description: "Mobile-first designs that look perfect on all devices and screen sizes",
+      description:
+        "Mobile-first designs that look perfect on all devices and screen sizes",
       color: "purple",
     },
     {
       icon: Code,
       title: "Development",
-      description: "Clean, efficient code using the latest technologies and best practices",
+      description:
+        "Clean, efficient code using the latest technologies and best practices",
       color: "green",
     },
     {
       icon: Search,
       title: "SEO Optimization",
-      description: "Built-in SEO best practices to help your website rank higher in search results",
+      description:
+        "Built-in SEO best practices to help your website rank higher in search results",
       color: "orange",
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-white">
@@ -87,8 +102,10 @@ export default function HomePage() {
                 </span>
               </h1>
               <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-6 lg:mb-8 max-w-2xl mx-auto lg:mx-0">
-                We deliver cutting-edge technology solutions and innovative web experiences that propel your business
-                forward. From AI-driven insights to seamless user interfaces, we transform your digital presence.
+                We deliver cutting-edge technology solutions and innovative web
+                experiences that propel your business forward. From AI-driven
+                insights to seamless user interfaces, we transform your digital
+                presence.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 justify-center lg:justify-start">
                 <Link href="/login">
@@ -100,49 +117,152 @@ export default function HomePage() {
                     <ArrowRight className="ml-2 w-4 h-4 lg:w-5 lg:h-5" />
                   </Button>
                 </Link>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="w-full sm:w-auto group hover:bg-gray-50 transition-all duration-300 bg-transparent"
-                  onClick={() => setIsVideoPlaying(true)}
-                >
-                  <Play className="mr-2 w-4 h-4 lg:w-5 lg:h-5 group-hover:scale-110 transition-transform" />
-                  Watch Our Process
-                </Button>
               </div>
             </div>
 
             <div className="relative mt-8 lg:mt-0">
-              <div className="relative z-10 bg-white rounded-2xl shadow-2xl p-4 sm:p-6 lg:p-8 transform hover:scale-105 transition-transform duration-500 mx-4 lg:mx-0">
-                <div className="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg mb-4 lg:mb-6 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-3 lg:mb-4">
-                      <span className="text-white font-bold text-lg lg:text-xl">B</span>
-                    </div>
-                    <p className="text-gray-600 text-sm lg:text-base">Your Website Preview</p>
+              {/* Circular Tech Design */}
+              <div className="relative w-80 h-80 lg:w-96 lg:h-96 mx-auto">
+                {/* Main Central Circle */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 lg:w-32 lg:h-32 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-2xl animate-pulse">
+                  <div className="w-16 h-16 lg:w-20 lg:h-20 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                    <div className="w-8 h-8 lg:w-10 lg:h-10 bg-white rounded-full animate-ping"></div>
                   </div>
                 </div>
-                <div className="space-y-2 lg:space-y-3">
-                  <div className="h-3 lg:h-4 bg-gray-200 rounded animate-pulse"></div>
-                  <div className="h-3 lg:h-4 bg-gray-200 rounded w-3/4 animate-pulse"></div>
-                  <div className="h-3 lg:h-4 bg-gray-200 rounded w-1/2 animate-pulse"></div>
+
+                {/* Orbital Rings */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 lg:w-60 lg:h-60 border-2 border-blue-300 rounded-full opacity-40 animate-spin-slow"></div>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 lg:w-80 lg:h-80 border border-purple-300 rounded-full opacity-30 animate-spin-reverse"></div>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 lg:w-96 lg:h-96 border border-green-300 rounded-full opacity-20 animate-spin-slow"></div>
+
+                {/* Orbiting Tech Elements */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 lg:w-60 lg:h-60 animate-spin-slow">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-blue-500 rounded-full border-2 border-blue-300 animate-bounce">
+                    <div className="absolute inset-1 bg-white rounded-full opacity-60"></div>
+                  </div>
+                  <div className="absolute top-1/2 -right-3 transform -translate-y-1/2 w-5 h-5 bg-green-500 rounded-full border-2 border-green-300 animate-pulse">
+                    <div className="absolute inset-0.5 bg-white rounded-full opacity-60"></div>
+                  </div>
+                  <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-purple-500 rounded-full border-2 border-purple-300 animate-bounce">
+                    <div className="absolute inset-0.5 bg-white rounded-full opacity-60"></div>
+                  </div>
+                  <div className="absolute top-1/2 -left-3 transform -translate-y-1/2 w-5 h-5 bg-orange-500 rounded-full border-2 border-orange-300 animate-pulse">
+                    <div className="absolute inset-0.5 bg-white rounded-full opacity-60"></div>
+                  </div>
+                </div>
+
+                {/* Secondary Orbital Elements */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 lg:w-80 lg:h-80 animate-spin-reverse">
+                  <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-cyan-500 rounded-full animate-ping"></div>
+                  <div className="absolute top-1/2 -right-2 transform -translate-y-1/2 w-3 h-3 bg-pink-500 rounded-full animate-pulse"></div>
+                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-yellow-500 rounded-full animate-bounce"></div>
+                  <div className="absolute top-1/2 -left-2 transform -translate-y-1/2 w-4 h-4 bg-red-500 rounded-full animate-ping"></div>
+                </div>
+
+                {/* Data Flow Circles */}
+                <div className="absolute top-8 right-8 w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full opacity-80 animate-float">
+                  <div className="absolute inset-2 bg-white/30 rounded-full"></div>
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-white rounded-full animate-ping"></div>
+                </div>
+
+                <div className="absolute bottom-8 left-8 w-10 h-10 lg:w-14 lg:h-14 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full opacity-80 animate-float-delayed">
+                  <div className="absolute inset-2 bg-white/30 rounded-full"></div>
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 bg-white rounded-full animate-pulse"></div>
+                </div>
+
+                <div className="absolute top-16 left-16 w-8 h-8 lg:w-12 lg:h-12 bg-gradient-to-br from-green-400 to-emerald-400 rounded-full opacity-80 animate-bounce">
+                  <div className="absolute inset-1.5 bg-white/30 rounded-full"></div>
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1 h-1 bg-white rounded-full animate-ping"></div>
+                </div>
+
+                <div className="absolute bottom-16 right-16 w-6 h-6 lg:w-10 lg:h-10 bg-gradient-to-br from-orange-400 to-red-400 rounded-full opacity-80 animate-pulse">
+                  <div className="absolute inset-1 bg-white/30 rounded-full"></div>
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1 h-1 bg-white rounded-full animate-bounce"></div>
+                </div>
+
+                {/* Connection Lines Between Circles */}
+                <svg className="absolute inset-0 w-full h-full opacity-30">
+                  <circle
+                    cx="50%"
+                    cy="50%"
+                    r="20%"
+                    fill="none"
+                    stroke="url(#circleGradient1)"
+                    strokeWidth="1"
+                    strokeDasharray="10,5"
+                    className="animate-spin-slow"
+                  />
+                  <circle
+                    cx="50%"
+                    cy="50%"
+                    r="30%"
+                    fill="none"
+                    stroke="url(#circleGradient2)"
+                    strokeWidth="1"
+                    strokeDasharray="15,10"
+                    className="animate-spin-reverse"
+                  />
+                  <circle
+                    cx="50%"
+                    cy="50%"
+                    r="40%"
+                    fill="none"
+                    stroke="url(#circleGradient3)"
+                    strokeWidth="0.5"
+                    strokeDasharray="20,15"
+                    className="animate-spin-slow"
+                  />
+                  <defs>
+                    <linearGradient id="circleGradient1">
+                      <stop offset="0%" stopColor="#3b82f6" />
+                      <stop offset="100%" stopColor="#8b5cf6" />
+                    </linearGradient>
+                    <linearGradient id="circleGradient2">
+                      <stop offset="0%" stopColor="#10b981" />
+                      <stop offset="100%" stopColor="#06b6d4" />
+                    </linearGradient>
+                    <linearGradient id="circleGradient3">
+                      <stop offset="0%" stopColor="#f59e0b" />
+                      <stop offset="100%" stopColor="#ef4444" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+
+                {/* Floating Binary Code in Circles */}
+                <div className="absolute top-4 left-1/3 w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center animate-float">
+                  <span className="text-xs font-mono text-blue-600 font-bold">
+                    01
+                  </span>
+                </div>
+                <div className="absolute bottom-4 right-1/3 w-6 h-6 bg-green-500/20 rounded-full flex items-center justify-center animate-float-delayed">
+                  <span className="text-xs font-mono text-green-600 font-bold">
+                    10
+                  </span>
+                </div>
+                <div className="absolute top-1/3 right-4 w-7 h-7 bg-purple-500/20 rounded-full flex items-center justify-center animate-bounce">
+                  <span className="text-xs font-mono text-purple-600 font-bold">
+                    11
+                  </span>
+                </div>
+                <div className="absolute bottom-1/3 left-4 w-6 h-6 bg-orange-500/20 rounded-full flex items-center justify-center animate-pulse">
+                  <span className="text-xs font-mono text-orange-600 font-bold">
+                    00
+                  </span>
                 </div>
               </div>
-              <div className="absolute -top-2 -right-2 lg:-top-4 lg:-right-4 w-48 h-48 lg:w-72 lg:h-72 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-20 animate-pulse"></div>
-              <div className="absolute -bottom-2 -left-2 lg:-bottom-4 lg:-left-4 w-32 h-32 lg:w-48 lg:h-48 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-20 animate-pulse"></div>
             </div>
           </div>
 
           {/* Stats Section */}
           <div className="mt-12 lg:mt-20 grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8 max-w-4xl mx-auto px-4">
             <div className="text-center group hover:scale-105 transition-transform duration-300">
-              <AnimatedCounter end={150} suffix="+" />
+              <AnimatedCounter end={10} suffix="+" />
               <div className="text-gray-600 group-hover:text-gray-900 transition-colors text-sm lg:text-base">
                 Projects Completed
               </div>
             </div>
             <div className="text-center group hover:scale-105 transition-transform duration-300">
-              <AnimatedCounter end={98} suffix="%" />
+              <AnimatedCounter end={100} suffix="%" />
               <div className="text-gray-600 group-hover:text-gray-900 transition-colors text-sm lg:text-base">
                 Client Satisfaction
               </div>
@@ -164,9 +284,12 @@ export default function HomePage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Our Services
+            </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              We offer comprehensive web design solutions to help your business succeed online
+              We offer comprehensive web design solutions to help your business
+              succeed online
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
@@ -180,12 +303,16 @@ export default function HomePage() {
                   <div
                     className={`w-10 h-10 lg:w-12 lg:h-12 bg-${service.color}-100 rounded-lg flex items-center justify-center mb-3 lg:mb-4 group-hover:scale-110 transition-transform duration-300`}
                   >
-                    <service.icon className={`w-5 h-5 lg:w-6 lg:h-6 text-${service.color}-600`} />
+                    <service.icon
+                      className={`w-5 h-5 lg:w-6 lg:h-6 text-${service.color}-600`}
+                    />
                   </div>
                   <CardTitle className="group-hover:text-blue-600 transition-colors text-lg lg:text-xl">
                     {service.title}
                   </CardTitle>
-                  <CardDescription className="text-sm lg:text-base">{service.description}</CardDescription>
+                  <CardDescription className="text-sm lg:text-base">
+                    {service.description}
+                  </CardDescription>
                 </CardHeader>
               </Card>
             ))}
@@ -209,16 +336,25 @@ export default function HomePage() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
-            <p className="text-xl text-gray-600">Don't just take our word for it</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              What Our Clients Say
+            </h2>
+            <p className="text-xl text-gray-600">
+              Don't just take our word for it
+            </p>
           </div>
 
           <div className="max-w-4xl mx-auto px-4">
             <div className="bg-white p-6 lg:p-8 rounded-2xl shadow-lg relative overflow-hidden">
               <div className="flex justify-center space-x-1 mb-4 lg:mb-6">
-                {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 lg:w-6 lg:h-6 fill-yellow-400 text-yellow-400" />
-                ))}
+                {[...Array(testimonials[currentTestimonial].rating)].map(
+                  (_, i) => (
+                    <Star
+                      key={i}
+                      className="w-5 h-5 lg:w-6 lg:h-6 fill-yellow-400 text-yellow-400"
+                    />
+                  )
+                )}
               </div>
               <blockquote className="text-lg lg:text-xl text-gray-700 italic mb-4 lg:mb-6 text-center leading-relaxed">
                 "{testimonials[currentTestimonial].text}"
@@ -227,7 +363,9 @@ export default function HomePage() {
                 <div className="font-semibold text-gray-900 text-base lg:text-lg">
                   {testimonials[currentTestimonial].author}
                 </div>
-                <div className="text-gray-600 text-sm lg:text-base">{testimonials[currentTestimonial].role}</div>
+                <div className="text-gray-600 text-sm lg:text-base">
+                  {testimonials[currentTestimonial].role}
+                </div>
               </div>
 
               {/* Testimonial Navigation */}
@@ -237,7 +375,9 @@ export default function HomePage() {
                     key={index}
                     onClick={() => setCurrentTestimonial(index)}
                     className={`w-2.5 h-2.5 lg:w-3 lg:h-3 rounded-full transition-all duration-300 ${
-                      index === currentTestimonial ? "bg-blue-600 scale-125" : "bg-gray-300 hover:bg-gray-400"
+                      index === currentTestimonial
+                        ? "bg-blue-600 scale-125"
+                        : "bg-gray-300 hover:bg-gray-400"
                     }`}
                   />
                 ))}
@@ -250,9 +390,12 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Online Presence?</h2>
+          <h2 className="text-4xl font-bold mb-6">
+            Ready to Transform Your Online Presence?
+          </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Let's create something amazing together. Get started with a free consultation today.
+            Let's create something amazing together. Get started with a free
+            consultation today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/login">
@@ -279,5 +422,5 @@ export default function HomePage() {
 
       <Footer />
     </div>
-  )
+  );
 }

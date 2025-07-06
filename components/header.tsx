@@ -79,9 +79,7 @@ export function Header() {
 
         <div className="flex items-center space-x-2 lg:space-x-4">
           <Link href="/login" onClick={handleNavClick}>
-            <Button className="hidden md:block text-sm lg:text-base px-3 lg:px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-105 transition-transform">
-              Get Started
-            </Button>
+            
           </Link>
 
           {/* Mobile Menu Button */}
@@ -111,9 +109,7 @@ export function Header() {
               </Link>
             ))}
             <Link href="/login" onClick={handleNavClick}>
-              <Button className="w-full mt-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-                Get Started
-              </Button>
+              
             </Link>
           </nav>
         </div>
