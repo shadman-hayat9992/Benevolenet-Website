@@ -88,17 +88,17 @@ export default function AboutPage() {
 
   const milestones = [
     {
-      year: "2024",
+      year: "2022",
       event: "Benevolenet Founded",
       description: "Started with a vision to create innovative tech solutions",
     },
     {
-      year: "2024",
+      year: "2023",
       event: "First 5 Projects",
       description: "Reached our first major milestone with happy clients",
     },
     {
-      year: "2025",
+      year: "2024",
       event: "10+ Projects",
       description: "Celebrated completing over 10 successful projects",
     },
