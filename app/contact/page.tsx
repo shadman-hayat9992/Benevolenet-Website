@@ -2,6 +2,7 @@
 
 import type React from "react";
 
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import {
   ArrowRight,
@@ -29,6 +30,18 @@ import {
 import { Checkbox } from "@/components/ui/checkbox";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+=======
+import { useState, useEffect } from "react"
+import { ArrowRight, Mail, Phone, MapPin, Clock, Send, CheckCircle, AlertCircle, Copy } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Textarea } from "@/components/ui/textarea"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
+>>>>>>> 991213c37a5d1ebcae1debf9c670652ff315f884
 
 interface FormData {
   firstName: string;
@@ -224,7 +237,7 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: "Office",
-      details: ["456 Innovation Lane", "Tech Hub, CA 90210"],
+      details: ["Nagpur, Maharashtra,", "India, 441002"],
       color: "green",
     },
     {
@@ -600,6 +613,7 @@ export default function ContactPage() {
                       )}
                     </div>
 
+<<<<<<< HEAD
                     <div className="flex items-center space-x-2">
                       <Checkbox
                         id="newsletter"
@@ -617,6 +631,8 @@ export default function ContactPage() {
                       </Label>
                     </div>
 
+=======
+>>>>>>> 991213c37a5d1ebcae1debf9c670652ff315f884
                     <Button
                       type="submit"
                       disabled={isSubmitting}

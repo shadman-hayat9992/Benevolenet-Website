@@ -230,11 +230,11 @@ export default function LoginPage() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 mt-8 pt-6 border-t border-white/20">
               <div className="text-center">
-                <div className="text-2xl font-bold">100+</div>
+                <div className="text-2xl font-bold">10+</div>
                 <div className="text-xs opacity-80">Clients</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold">99%</div>
+                <div className="text-2xl font-bold">100%</div>
                 <div className="text-xs opacity-80">Uptime</div>
               </div>
               <div className="text-center">

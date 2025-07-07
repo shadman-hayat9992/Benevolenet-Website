@@ -13,32 +13,53 @@ export default function AboutPage() {
 
   const teamMembers = [
     {
-      name: "Alex Johnson",
+      name: "Shadman Hayat",
       role: "Creative Director & Founder",
       bio: "With over 8 years in web design, Alex leads our creative vision and ensures every project exceeds expectations.",
       image: "/placeholder.svg?height=300&width=300",
       skills: ["UI/UX Design", "Brand Strategy", "Creative Direction"],
     },
     {
-      name: "Sarah Chen",
+      name: "Abdul Rahim",
       role: "Lead Developer",
       bio: "Sarah brings technical excellence to every project, specializing in modern web technologies and performance optimization. Specializing in cloud infrastructure and scalable systems.",
       image: "/placeholder.svg?height=300&width=300",
       skills: ["React/Next.js", "Node.js", "Database Design"],
     },
     {
-      name: "Mike Rodriguez",
+      name: "Zaid Ashraf",
       role: "AI Specialist",
       bio: "Mike ensures our AI models are accurate and efficient, driving innovation and providing cutting-edge solutions.",
       image: "/placeholder.svg?height=300&width=300",
       skills: ["AI Strategy", "Machine Learning", "Data Science"],
     },
     {
-      name: "Emily Davis",
+      name: "Anjali Rathod",
       role: "Project Manager",
       bio: "Emily keeps projects on track and ensures seamless communication between our team and clients throughout the process. Focused on agile methodologies and efficient workflows.",
       image: "/placeholder.svg?height=300&width=300",
       skills: ["Project Management", "Client Relations", "Quality Assurance"],
+    },
+    {
+      name: "Khushi Majhetia",
+      role: "AI Specialist",
+      bio: "Mike ensures our AI models are accurate and efficient, driving innovation and providing cutting-edge solutions.",
+      image: "/placeholder.svg?height=300&width=300",
+      skills: ["AI Strategy", "Machine Learning", "Data Science"],
+    },
+    {
+      name: "Sagar Dhara",
+      role: "AI Specialist",
+      bio: "Mike ensures our AI models are accurate and efficient, driving innovation and providing cutting-edge solutions.",
+      image: "/placeholder.svg?height=300&width=300",
+      skills: ["AI Strategy", "Machine Learning", "Data Science"],
+    },
+    {
+      name: "Awais Ansari",
+      role: "AI Specialist",
+      bio: "Mike ensures our AI models are accurate and efficient, driving innovation and providing cutting-edge solutions.",
+      image: "/placeholder.svg?height=300&width=300",
+      skills: ["AI Strategy", "Machine Learning", "Data Science"],
     },
   ]
 
@@ -67,34 +88,24 @@ export default function AboutPage() {
 
   const milestones = [
     {
-      year: "2019",
+      year: "2022",
       event: "Benevolenet Founded",
       description: "Started with a vision to create innovative tech solutions",
     },
     {
-      year: "2020",
-      event: "First 50 Projects",
+      year: "2023",
+      event: "First 5 Projects",
       description: "Reached our first major milestone with happy clients",
     },
     {
-      year: "2021",
-      event: "Team Expansion",
-      description: "Grew our team to include specialized developers and designers",
+      year: "2024",
+      event: "10+ Projects",
+      description: "Celebrated completing over 10 successful projects",
     },
     {
-      year: "2022",
-      event: "100+ Projects",
-      description: "Celebrated completing over 100 successful projects",
-    },
-    {
-      year: "2023",
+      year: "2025",
       event: "Award Recognition",
       description: "Received 'Best Tech Innovation' award from Tech Excellence",
-    },
-    {
-      year: "2024",
-      event: "150+ Projects",
-      description: "Continuing to grow and serve amazing clients worldwide",
     },
   ]
 
@@ -105,8 +116,8 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="pt-24 pb-20 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+          <div className="grid grid-cols-1 gap-12 items-center">
+            <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
                 About{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
@@ -118,33 +129,19 @@ export default function AboutPage() {
                 businesses. Since 2019, we've been helping companies create stunning digital experiences that drive real
                 results.
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 justify-center">
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-5 h-5 text-green-500" />
-                  <span className="text-gray-700">5+ Years Experience</span>
+                  <span className="text-gray-700">1+ Years Experience</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-5 h-5 text-green-500" />
-                  <span className="text-gray-700">150+ Projects Completed</span>
+                  <span className="text-gray-700">10+ Projects Completed</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-5 h-5 text-green-500" />
-                  <span className="text-gray-700">98% Client Satisfaction</span>
+                  <span className="text-gray-700">100% Client Satisfaction</span>
                 </div>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="bg-white rounded-2xl shadow-2xl p-8 transform hover:scale-105 transition-transform duration-500">
-                <img
-                  src="/placeholder.svg?height=400&width=500"
-                  alt="Benevolenet team working"
-                  className="w-full h-64 object-cover rounded-lg mb-6"
-                />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Our Mission</h3>
-                <p className="text-gray-600">
-                  To empower businesses with exceptional technology solutions that not only look amazing but drive
-                  measurable growth and success through digital transformation.
-                </p>
               </div>
             </div>
           </div>
@@ -159,28 +156,28 @@ export default function AboutPage() {
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors">
                 <Users className="w-8 h-8 text-blue-600" />
               </div>
-              <AnimatedCounter end={150} suffix="+" />
+              <AnimatedCounter end={10} suffix="+" />
               <div className="text-gray-600 mt-2">Happy Clients</div>
             </div>
             <div className="text-center group hover:scale-105 transition-transform duration-300">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-200 transition-colors">
                 <Award className="w-8 h-8 text-purple-600" />
               </div>
-              <AnimatedCounter end={25} suffix="+" />
+              <AnimatedCounter end={5} suffix="+" />
               <div className="text-gray-600 mt-2">Awards Won</div>
             </div>
             <div className="text-center group hover:scale-105 transition-transform duration-300">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200 transition-colors">
                 <Clock className="w-8 h-8 text-green-600" />
               </div>
-              <AnimatedCounter end={5} suffix="+" />
+              <AnimatedCounter end={1} suffix="+" />
               <div className="text-gray-600 mt-2">Years Experience</div>
             </div>
             <div className="text-center group hover:scale-105 transition-transform duration-300">
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-200 transition-colors">
                 <Rocket className="w-8 h-8 text-orange-600" />
               </div>
-              <AnimatedCounter end={98} suffix="%" />
+              <AnimatedCounter end={100} suffix="%" />
               <div className="text-gray-600 mt-2">Success Rate</div>
             </div>
           </div>
@@ -258,29 +255,7 @@ export default function AboutPage() {
 
           {/* Active Team Member Details */}
           <div className="max-w-3xl mx-auto">
-            <Card className="bg-gradient-to-r from-blue-50 to-purple-50 border-2 border-blue-200">
-              <CardContent className="p-8">
-                <div className="flex flex-col md:flex-row items-center gap-6">
-                  <img
-                    src={teamMembers[activeTeamMember].image || "/placeholder.svg"}
-                    alt={teamMembers[activeTeamMember].name}
-                    className="w-32 h-32 rounded-full object-cover"
-                  />
-                  <div className="text-center md:text-left">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{teamMembers[activeTeamMember].name}</h3>
-                    <p className="text-blue-600 font-medium mb-4">{teamMembers[activeTeamMember].role}</p>
-                    <p className="text-gray-700 mb-4 leading-relaxed">{teamMembers[activeTeamMember].bio}</p>
-                    <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                      {teamMembers[activeTeamMember].skills.map((skill) => (
-                        <span key={skill} className="px-3 py-1 bg-white text-gray-700 text-sm rounded-full shadow-sm">
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            
           </div>
         </div>
       </section>
@@ -329,7 +304,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Work With Us?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Let's create something amazing together. Join the 150+ businesses that trust Benevolenet.
+            Let's create something amazing together. Join the 10+ businesses that trust Benevolenet.
           </p>
           <div className="space-y-4">
             <Button
