@@ -6,11 +6,15 @@ import {
   UpdateContact,
   DeleteContact,
 } from '../Controller/ContactController.js';
+import SendMail from '../Controller/SendMail.js';
 
 const ContactRouter = Router();
 
 // Get all contacts
 ContactRouter.get('/contact', GetContacts);
+
+//For mail
+ContactRouter.get('/mail', SendMail);
 
 // Get contact by ID
 ContactRouter.get('/contact/:id', GetContactById);
